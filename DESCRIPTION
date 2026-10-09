@@ -1,0 +1,11 @@
+Package: causallinkageResearch
+Title: Research Compendium for Causal Inference with Uncertain Record Linkage
+Version: 0.1.0
+Authors@R: person("Gaurav", "Sood", role = c("aut", "cre"))
+Description: Finite-population derivations, graph-constrained sensitivity analysis,
+    validation-sample correction, simulation, and a read-only empirical adapter.
+    This is a research compendium, not a released statistical package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: lpSolve, stringdist, sandwich
+Suggests: testthat, lintr, styler, arrow, dplyr, stringi, digest, renv

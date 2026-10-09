@@ -1,0 +1,41 @@
+\begin{center}\small
+\setlength{\LTcapwidth}{\textwidth}
+\begin{longtable}{rrlrrrrr}
+\caption{Identifier-generated candidates: rejection frequencies and paired gains.
+Each row uses 40 replications at the 5\% level.
+Corruption changes at most one identifier
+character; geographic baseline risks vary by the known identifier group. Each comparison
+uses the oracle-known accepted identity-error count. Rejection rates are proportions;
+the last column is graph minus accuracy-only rejection, with Monte Carlo standard error.
+Unresolved optimizations conservatively do not reject; failures are reported in the text.
+The effect column is a probability increment before capping.}\label{tab:identifier}\\
+\toprule
+$N$ & Noise & Baseline & Effect & Oracle & Accuracy & Graph & Gain (SE) \\
+\midrule\endfirsthead
+\toprule $N$ & Noise & Baseline & Effect & Oracle & Accuracy & Graph & Gain (SE) \\
+\midrule\endhead
+40 & 0.25 & Geographic & 0.00 & 0.025 & 0.000 & 0.000 & 0.000 (0.000) \\
+40 & 0.25 & Geographic & 0.25 & 0.175 & 0.000 & 0.025 & 0.025 (0.025) \\
+40 & 0.25 & Geographic & 0.50 & 0.575 & 0.075 & 0.100 & 0.025 (0.025) \\
+40 & 0.75 & Geographic & 0.00 & 0.000 & 0.000 & 0.000 & 0.000 (0.000) \\
+40 & 0.75 & Geographic & 0.25 & 0.100 & 0.000 & 0.000 & 0.000 (0.000) \\
+40 & 0.75 & Geographic & 0.50 & 0.575 & 0.000 & 0.100 & 0.100 (0.048) \\
+40 & 0.25 & Uniform & 0.00 & 0.025 & 0.000 & 0.000 & 0.000 (0.000) \\
+40 & 0.25 & Uniform & 0.25 & 0.225 & 0.050 & 0.050 & 0.000 (0.000) \\
+40 & 0.25 & Uniform & 0.50 & 0.800 & 0.200 & 0.200 & 0.000 (0.000) \\
+40 & 0.75 & Uniform & 0.00 & 0.025 & 0.000 & 0.000 & 0.000 (0.000) \\
+40 & 0.75 & Uniform & 0.25 & 0.125 & 0.000 & 0.000 & 0.000 (0.000) \\
+40 & 0.75 & Uniform & 0.50 & 0.850 & 0.025 & 0.050 & 0.025 (0.025) \\
+80 & 0.25 & Geographic & 0.00 & 0.025 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.25 & Geographic & 0.25 & 0.500 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.25 & Geographic & 0.50 & 0.925 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.75 & Geographic & 0.00 & 0.075 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.75 & Geographic & 0.25 & 0.625 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.75 & Geographic & 0.50 & 0.950 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.25 & Uniform & 0.00 & 0.075 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.25 & Uniform & 0.25 & 0.500 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.25 & Uniform & 0.50 & 1.000 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.75 & Uniform & 0.00 & 0.025 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.75 & Uniform & 0.25 & 0.450 & 0.000 & 0.000 & 0.000 (0.000) \\
+80 & 0.75 & Uniform & 0.50 & 0.975 & 0.000 & 0.000 & 0.000 (0.000) \\
+\bottomrule\end{longtable}\end{center}

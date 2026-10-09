@@ -1,0 +1,315 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,graphicx}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\M}{\mathcal M}
+\newcommand{\PrA}{\Pr_A}
+\input{../results/methods/macros.tex}
+\title{Exact randomization inference with uncertain record identities}
+\author{Research draft}
+\date{October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An experimental conclusion can depend on how outcome records are assigned to experimental
+units. We develop a sensitivity analysis that retains candidate links, one-to-one ownership,
+and a bound on changed accepted identities. Under complete randomization and full overlap,
+every feasible outcome permutation has the same sharp-null reference distribution.
+The largest Fisher p-value therefore follows from the smallest attainable absolute
+contrast; the smallest p-value follows from the linear contrast endpoints. Integer
+optimization returns the linkages attaining both extremes. We also report the minimum
+identity-change budget that removes rejection and give a closed-form binary comparator
+that uses accuracy information without candidate restrictions. Exhaustive checks establish
+agreement with direct enumeration, and an identifier-based simulation measures what the
+candidate graph adds. In these synthetic settings, gains are modest and substantial
+power loss remains. The method specializes established matching-set and sensitivity
+principles. Its inferential guarantee depends on the true linkage belonging to the stated
+set; it does not establish that membership from name scores alone.
+\end{abstract}
+
+\section{The question and the contribution}
+A researcher has randomized treatment assignments in one file and outcomes in another.
+Several outcome records may plausibly belong to each experimental unit. The question is
+whether the sharp no-effect null can be rejected under every permitted assignment of
+records to units. A linkage accuracy rate restricts how many accepted identities may be
+wrong. Candidate links additionally restrict which outcomes can move between which units.
+These restrictions can change the answer even when the accepted matching and error budget
+are held fixed.
+
+Our contribution is a specified randomization sensitivity procedure over record identities.
+It computes the exact p-value endpoints for a stated graph and error budget, returns the
+attaining identities, and identifies the budget at which rejection first fails. Its useful
+specialization is the combination of the experimental assignment law with conservation of
+whole donor records. A corrected outcome vector that cannot arise from a feasible matching
+is excluded. The algorithm does not require probabilities for individual links.
+
+Optimization of statistics over matching confidence sets is established
+\cite{hall}; integer-programming sensitivity to binary outcome misclassification is also
+established \cite{heng}. Permutation-set inference under a Gaussian regression model uses
+a different source of randomness \cite{ota}. The result here supplies the full-bijection
+Fisher reference law and its reduction to attainable contrasts. It uses standard assignment
+constraints, absolute-value optimization, and confidence-set maximization. The contribution
+is this causal specialization and its implementation, rather than a new optimization or
+coverage principle. Linkage-induced causal bias and loss of power already motivate a
+substantial literature \cite{wortman,tahamont}.
+
+\section{Experimental units and feasible identities}
+Fix $N$ units with potential outcomes $Y_i(0),Y_i(1)$. Exactly $m$ receive treatment,
+uniformly over the $\binom Nm$ assignments; write $c=N-m$. Assignment $Z$ is observed without
+error. The donor file contains exactly one realized outcome for every unit and no other
+outcomes. Its rows $y_1,\ldots,y_N$ have unknown true ownership $\pi^*$, a bijection.
+Thus $Y_i=Y_i(Z_i)=y_{\pi^*(i)}$.
+
+Let $G$ be a bipartite candidate graph and $\pi_0$ an accepted bijection. For integer $K$,
+define
+\[
+ \M(G,K)=\left\{\pi:\pi\text{ bijective},\ (i,\pi(i))\in G\ \forall i,
+ \quad \sum_i1\{\pi(i)\ne\pi_0(i)\}\le K\right\}.
+\]
+The analysis requires a nonempty set. Unless stated otherwise, it assumes $\pi^*\in\M(G,K)$.
+A donor supplies its complete record: treating each field as independently reassignable
+would describe a different uncertainty set. The present test concerns known assignment
+and uncertain outcomes; it is not a general correction for jointly mislinked treatment,
+covariates, and outcomes.
+
+For any feasible $\pi$, the observed contrast is
+\[
+ T(\pi)=\sum_iw_i y_{\pi(i)},\qquad
+ w_i=\frac{Z_i}{m}-\frac{1-Z_i}{c}.
+\]
+Let $L=\min_{\pi\in\M}T(\pi)$ and $U=\max_{\pi\in\M}T(\pi)$.
+These are extrema of reconstructed estimates. They are not confidence limits for the
+finite-population average effect $N^{-1}\sum_i\{Y_i(1)-Y_i(0)\}$.
+
+\section{Exact p-value endpoints}
+We test Fisher's sharp null $Y_i(1)=Y_i(0)$ for every unit. For a uniform size-$m$
+assignment $A$, define the common tail function
+\[
+ H(s)=\PrA\left(\left|\sum_i\left\{\frac{A_i}{m}-\frac{1-A_i}{c}\right\}y_i\right|
+ \ge s\right).
+\]
+\begin{proposition}[Common reference law]
+Under complete randomization, the distribution of the absolute contrast is identical
+for every full permutation of the donor outcomes. Consequently, if
+$d=\min_{\pi\in\M}|T(\pi)|$ and $D=\max(|L|,|U|)$, then
+\[
+ p_{\max}=\max_{\pi\in\M}p(\pi)=H(d),\qquad
+ p_{\min}=\min_{\pi\in\M}p(\pi)=H(D).
+\]
+Both endpoints are attained by feasible linkages.
+\end{proposition}
+\begin{proof}
+A permutation of unit labels maps the collection of size-$m$ treatment subsets bijectively
+onto itself. Each subset has the same probability, so permuting the outcome vector
+preserves its randomization law. The function $H$ is nonincreasing, and the nonempty
+finite feasible set attains the minimum and maximum absolute contrasts. The maximum
+absolute contrast is attained at a linear endpoint.
+\end{proof}
+
+The maximum p-value answers whether every permitted linkage rejects. The minimum
+p-value shows how favorable a permitted reconstruction could be. Selecting the linkage
+with the smallest p-value after observing outcomes does not yield a valid robust test.
+The reference law uses the full experimental assignment support; it does not condition
+assignment on the observed candidate graph.
+
+For binary outcomes with $s_y$ successes, treated successes follow
+$Q\sim\operatorname{Hypergeometric}(N,s_y,m)$, and
+\[
+ H(s)=\sum_{q=\max(0,m-N+s_y)}^{\min(m,s_y)}
+ \frac{\binom{s_y}{q}\binom{N-s_y}{m-q}}{\binom Nm}
+ 1\left\{\left|\frac q m-\frac{s_y-q}{c}\right|\ge s\right\}.
+\]
+Any two-valued outcome has the same calculation after affine recoding. For general
+outcomes, the implementation enumerates the assignment distribution subject to an
+explicit size limit. It optimizes over linkages without enumerating them. This does
+not imply that integer optimization is inexpensive for arbitrary graphs or outcomes.
+
+\subsection{Inference when the graph can miss truth}
+\begin{proposition}[Containment-adjusted validity]
+Suppose $\Pr\{\pi^*\notin\M(G,K)\}\le\delta$ under every null population under
+consideration. Then $p_{\mathrm{rob}}=\min(1,p_{\max}+\delta)$ satisfies
+$\Pr(p_{\mathrm{rob}}\le\alpha)\le\alpha$.
+\end{proposition}
+\begin{proof}
+On containment, $p_{\max}\ge p(\pi^*)$ pointwise. For $\delta\le\alpha<1$, rejection
+therefore implies either containment failure or $p(\pi^*)\le\alpha-\delta$.
+The first event has probability at most $\delta$ and the second at most
+$\alpha-\delta$ by oracle randomization validity. If $\alpha<\delta$, rejection
+is impossible; $\alpha=1$ is immediate.
+\end{proof}
+This is the established confidence-set maximization argument \cite{berger}.
+The graph may be data dependent; independence between graph construction and outcomes
+is not required by the proof. What is required is the joint containment bound under
+the relevant repeated experiment. Pairwise candidate recall is not the probability
+that the entire true matching survives. The software accepts $\delta$; it does not
+estimate or certify it.
+
+\section{Optimization and an identity breakdown budget}
+Use binary variables $x_{ij}$ for allowed edges. Require each row and column to sum to
+one and $N-\sum_i x_{i,\pi_0(i)}\le K$. Minimizing and maximizing
+$\sum_{ij}w_i y_j x_{ij}$ gives $L,U$. For $d$, add $t\ge0$ and minimize $t$ subject to
+\[
+ -t\le\sum_{ij}w_i y_jx_{ij}\le t.
+\]
+For two-valued outcomes, we optimize the equivalent integer objective
+$|Nq-ms_y|$ and bound it below by its minimum over hypergeometric support. This
+prevents a search for zero when the outcome lattice excludes it. The returned
+assignments are checked for feasibility and agreement with the objectives.
+An interval $[L,U]$ spanning zero does not guarantee an attainable zero. For example,
+the only contrasts might be $-2$ and $2$. Substituting the distance of $[L,U]$ from
+zero would discard the discreteness that the integer program preserves.
+
+An identity swap between anchors $i,k$ changes the contrast by
+$(w_i-w_k)(y_{\pi(k)}-y_{\pi(i)})$. Within-arm swaps preserve the unadjusted contrast;
+cross-arm swaps matter according to the outcome difference. Arbitrary matching
+differences decompose into alternating cycles. This explains why error counts and
+candidate counts alone do not determine uncertainty. These are standard assignment
+properties applied to the causal contrast, consistent with earlier observations about
+harmless within-subclass linkage errors \cite{wortman}.
+
+For breakdown analysis require the accepted map itself to satisfy the graph
+constraints, so the zero-budget set is nonempty. Define the identity breakdown budget by
+\[
+ K_{\mathrm{break}}=\min\{K:p_{\mathrm{rob}}(G,K)>\alpha\},
+\]
+where rejection uses $p\le\alpha$. The output is zero if the containment-adjusted accepted p-value already fails
+to reject and infinity if every graph-feasible map rejects. Because feasible sets grow
+with $K$, $p_{\mathrm{rob}}$ is nondecreasing, so binary search finds the first budget.
+It returns a linkage demonstrating the loss of rejection. This is an identity-constrained
+counterpart of warning accuracy for outcome misclassification \cite{heng}, not a separate
+claim to invent breakdown analysis.
+
+\subsection{A comparator that conserves donors}
+The accuracy-only comparison retains the same $y,\pi_0,K$ and one-to-one constraint,
+but permits every anchor--donor edge. It does not invent replacement outcomes.
+\begin{proposition}[Binary accuracy-only support]
+For binary outcomes, let $q_0$ be accepted treated successes and $s_y$ total successes.
+Under the complete graph and at most $K$ changed identities, attainable treated-success
+counts are exactly the integers in
+\[
+ \left[\max\{0,m-N+s_y,q_0-\lfloor K/2\rfloor\},\quad
+ \min\{m,s_y,q_0+\lfloor K/2\rfloor\}\right].
+\]
+\end{proposition}
+\begin{proof}
+Changing treated successes by $h$ requires at least $|h|$ changes of treated outcomes
+and $|h|$ opposite changes of control outcomes. Hence at least $2|h|$ identities must
+change. Disjoint swaps of opposite-valued donors across arms attain this lower bound
+for every count within the natural support.
+\end{proof}
+Evaluating $H$ at these counts gives an exact comparator without a complete-graph
+integer program. Arbitrary candidate graphs can leave gaps in attainable counts;
+the interval formula is not transferred to them. Equal-valued donors also cannot be
+collapsed if their allowed neighbors or accepted-identity costs differ.
+
+\section{Validation and the information gained from candidates}
+The code is checked against exhaustive linkages and assignments in small problems,
+including unequal arms, off-graph budgets, ties, disconnected components, and shared
+identity budgets. Tests compare p-value endpoints and their witnesses, rather than
+only solver objective values. Further checks establish scale and location invariance
+and compare breakdown budgets with exhaustive search. Outcomes are centered and
+scaled before optimization and tail comparisons, then reported contrasts are returned
+in their original units. This prevents an absolute numerical tolerance from making
+small-unit outcomes appear identically zero. Exactness refers to the finite-sample
+probability and global optimization targets; solver and probability calculations
+still use floating-point tolerances, not arbitrary-precision arithmetic.
+
+\subsection{A controlled comparison}
+A deliberately constructed example keeps the accepted map, its identity accuracy,
+and the number of candidates per record fixed while changing which cross-arm
+exchanges are possible. Table~\ref{tab:example} shows different robust conclusions.
+These are controlled information sets, not estimated graphs.
+\input{../results/methods/example.tex}
+Enumerating every assignment in the accompanying design checks size and power without
+Monte Carlo uncertainty. Table~\ref{tab:design} retains the cases where the graph gains
+little or substantial power is still lost. A narrow estimate range by itself does not
+remove experimental uncertainty.
+\input{../results/methods/design.tex}
+
+\subsection{Candidates generated from identifiers}
+The second comparison contains \IdentifierEvaluations{} evaluations and generates
+identifiers before treatment and outcomes. Records
+share a known geographic group and a short, potentially duplicated identifier. At most
+one identifier character is corrupted; candidate links require the same group and at
+most one character difference. True-link containment follows from this stated error
+support, without adding missing true edges after graph construction. A minimum-distance
+one-to-one matching, with random outcome-independent tie breaking, supplies the accepted map.
+Donor rows are shuffled so that row position does not reveal identity. There are
+ten geographic groups in each population; increasing sample size also increases
+the records per group and candidate ambiguity. This is not a scaling experiment
+that holds linkage difficulty fixed.
+
+The graph and accuracy-only procedures receive the same accepted map and the same
+\emph{oracle-known} number of incorrect accepted identities. This isolates the value
+of candidate restrictions; it is not a method for learning an accuracy budget from
+unvalidated records. Simulations cross two sample sizes, two corruption probabilities,
+uniform versus geographically varying baseline risks, and a sharp null plus two
+positive treatment-response increments. Complete randomization is independent of
+identifiers. Positive increments need not equal the average treatment effect because
+success probabilities are capped at one. Every scenario is retained, including weak
+gains and failures. A solver time limit gives a conservative nonrejection on failed
+optimizations; those runs are recorded as unresolved, not exact p-value endpoints. The protocol records the previously inspected controlled examples
+and separates timing pilots from final simulation seeds.
+\input{../results/methods/identifier.tex}
+\input{../results/methods/identifier-text.tex}
+The intervals and standard errors in this comparison concern Monte Carlo uncertainty
+across synthetic populations and assignments. A zero estimated Monte Carlo standard
+error means all sampled paired differences were zero; it does not establish a zero
+population difference. Completed individual tests use exact
+hypergeometric reference probabilities. Synthetic name errors with known support and
+an oracle error budget do not establish performance for actual administrative linkage.
+
+\section{Scope and empirical use}
+The method applies when the experiment is completely randomized, assignment is known,
+and both files cover exactly the same units once. Blocked assignment can give different
+reference laws when a linkage moves outcomes across blocks. Partial overlap or extra
+donors can change the outcome multiset. Neither situation inherits the common-law
+shortcut. Covariate-dependent regression weights and linked treatment labels require
+separate derivations. The present null is no effect for every unit; the test is not
+an exact test of a zero average effect with heterogeneous individual effects.
+
+The Rajasthan reservation--MNREGA exercise remains a separate sensitivity application.
+It assumes the reservation lottery requested for that analysis, uses a stratified design
+and a rectangular candidate graph, and evaluates feasible reconstructions against their
+own simulated assignment laws. Those outputs are not global exact p-value endpoints
+from the theorem here. Its audit shows that dramatic coefficient movements depend on
+weak GP-name candidates admitted by concatenated geographic names. Tighter candidate
+rules greatly reduce those movements, but do not independently validate the remaining
+identities. It therefore motivates scrutiny of feasible sets rather than validating
+the present method's practical gain.
+
+For an application, supply an independently justified candidate set and error budget,
+compute the robust p-value and attaining map, and inspect the identity changes that
+matter. If whole-set coverage is uncertain, report sensitivity to omissions or a
+supported containment adjustment. The immediate empirical requirement is a validation
+sample or benchmark with independently known identities. A small maximized p-value
+then has a clear interpretation: every identity reconstruction retained by the stated
+restrictions rejects the sharp no-effect null under the experimental design.
+
+\begingroup\small
+\begin{thebibliography}{9}
+\bibitem{hall} Hall, R., and S. Fienberg (2012).
+Valid Statistical Inference on Automatically Matched Files.
+\url{https://www.cs.cmu.edu/~rjhall/linkage.pdf}.
+\bibitem{heng} Heng, S., and P. A. Shaw (2025).
+Sensitivity Analysis for Binary Outcome Misclassification in Randomization Tests via
+Integer Programming. \url{https://arxiv.org/abs/2201.03111}.
+\bibitem{ota} Ota, H., and M. Imaizumi (2026).
+Finite-Sample Inference for Sparsely Permuted Linear Regression.
+\url{https://arxiv.org/abs/2601.14872}.
+\bibitem{berger} Berger, R. L., and D. D. Boos (1994).
+P Values Maximized Over a Confidence Set for the Nuisance Parameter.
+Journal of the American Statistical Association 89:1012--1016.
+\url{https://doi.org/10.1080/01621459.1994.10476836}.
+\bibitem{wortman} Wortman, J. H., and J. P. Reiter (2018).
+Simultaneous Record Linkage and Causal Inference with Propensity Score Subclassification.
+\url{https://arxiv.org/abs/1709.03631}.
+\bibitem{tahamont} Tahamont, S., et al. (2021).
+Dude, Where's My Treatment Effect? Errors in Administrative Data Linking and the
+Destruction of Statistical Power in Randomized Experiments.
+\url{https://doi.org/10.1007/s10940-020-09461-x}.
+\end{thebibliography}
+\endgroup
+\end{document}

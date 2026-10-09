@@ -1,0 +1,173 @@
+year,map,source_id,old_target,new_target,z,weight,old_y,new_y,delta,stratum
+2005,budget_43_minimum,SAWAIMADHOPURBONLIbonli,rajasthan sawai madhopur bonli बल,rajasthan sawai madhopur bonli chandnoli,1.0,0.0008087166193971318,493.0,0.0,-0.398697293362786,836
+2005,budget_43_minimum,BARMERSINDHARIhodu,rajasthan barmer sindhari हड,rajasthan barmer sindhari चड क ढण,1.0,0.0007278449574574185,544.0,0.0,-0.3959476568568357,111
+2005,budget_43_minimum,BARMERSINDHARIkamthai,rajasthan barmer sindhari कमठई,rajasthan barmer sindhari अणखय,1.0,0.0007278449574574185,470.0,0.0,-0.3420871300049867,111
+2005,budget_43_minimum,BHARATPURKAMANpai,rajasthan bharatpur kaman पई,rajasthan bharatpur kaman bamni,1.0,0.0007278449574574185,290.0,0.0,-0.21107503766265137,135
+2005,budget_43_minimum,DUNGARPURBICHHIWARAbichhiwara,rajasthan dungarpur bichhiwara बछवड,rajasthan dungarpur bichhiwara छप,1.0,0.0006616772340521986,351.0,66.0,-0.1885780117048766,359
+2005,budget_43_minimum,SAWAIMADHOPURBONLIthadoli,rajasthan sawai madhopur bonli थडल,rajasthan sawai madhopur bonli बल,0.0,-0.00040435830969856584,31.0,493.0,-0.18681353908073742,836
+2005,budget_43_minimum,BHARATPURNADBAIgagwana,rajasthan bharatpur nadbai गगवन,rajasthan bharatpur nadbai नम,1.0,0.0006065374645478487,307.0,8.0,-0.18135470189980676,139
+2005,budget_43_minimum,JHUNJHUNUKHETRImandri,rajasthan jhunjhunu khetri मदर,rajasthan jhunjhunu khetri हरडय,1.0,0.0006065374645478487,276.0,5.0,-0.164371652892467,571
+2005,budget_43_minimum,JHUNJHUNUKHETRIhardiya,rajasthan jhunjhunu khetri हरडय,rajasthan jhunjhunu khetri मदर,0.0,-0.0006065374645478487,5.0,276.0,-0.164371652892467,566
+2005,budget_43_minimum,JAIPURSANGANERlakhana,rajasthan jaipur sanganer लखन,rajasthan jaipur sanganer कलवड,1.0,0.0008087166193971318,211.0,11.0,-0.16174332387942636,467
+2005,budget_43_minimum,JHUNJHUNUSURAJGARHjakhod,rajasthan jhunjhunu surajgarh जखद,rajasthan jhunjhunu surajgarh सजडल,1.0,0.0006739305161642765,239.0,3.0,-0.15904760181476923,582
+2005,budget_43_minimum,GANGANAGARANUPGARH6 apd,rajasthan sri ganganagar anupgarh 6 प,rajasthan sri ganganagar anupgarh 12 ab,1.0,0.0008087166193971318,192.0,0.0,-0.1552735909242493,366
+2005,budget_43_minimum,DAUSASIKRAIsikandara,rajasthan dausa sikrai सकनदर,rajasthan dausa sikrai नदर,1.0,0.0007719567730608985,230.0,31.0,-0.1536193978391188,344
+2005,budget_43_minimum,DAUSASIKRAImanpur,rajasthan dausa sikrai मनपर,rajasthan dausa sikrai ganipur,1.0,0.0009098061968217732,167.0,0.0,-0.15193763486923612,342
+2005,budget_43_minimum,SAWAIMADHOPURBONLIbhadoti,rajasthan sawai madhopur bonli भडत,rajasthan sawai madhopur bonli bharja nadi,1.0,0.0008087166193971318,187.0,0.0,-0.15123000782726365,836
+2005,budget_43_minimum,BHARATPURKAMANbamanwadi,rajasthan bharatpur kaman bamni,rajasthan bharatpur kaman भडर,0.0,-0.0009704599432765581,0.0,150.0,-0.14556899149148372,133
+2005,budget_43_minimum,BIKANERNOKHAlalamdesar bada,rajasthan bikaner nokha ललमदसर बड,rajasthan bikaner nokha ललसर,1.0,0.0009704599432765581,143.0,0.0,-0.1387757718885478,233
+2005,budget_43_minimum,BARMERSINDHARIkarna,rajasthan barmer sindhari करन,rajasthan barmer sindhari manawas,1.0,0.000653194192589991,212.0,0.0,-0.1384771688290781,107
+2005,budget_43_minimum,BARMERSINDHARInokhda,rajasthan barmer sindhari नखड़,rajasthan barmer sindhari नकड़,1.0,0.000653194192589991,207.0,0.0,-0.13521119786612815,107
+2005,budget_43_minimum,JAISALMERSAMchelak,rajasthan jaisalmer sam चलक,rajasthan jaisalmer sam लख,1.0,0.0010108957742464147,219.0,86.0,-0.13444913797477315,492
+2005,budget_43_minimum,JHUNJHUNUSURAJGARHsujdola,rajasthan jhunjhunu surajgarh सजडल,rajasthan jhunjhunu surajgarh जखद,0.0,-0.0005391444129314211,3.0,239.0,-0.1272380814518154,582
+2005,budget_43_minimum,BARMERSINDHARIdhanva,rajasthan barmer sindhari धनव,rajasthan barmer sindhari भट,1.0,0.0007278449574574185,174.0,0.0,-0.12664502259759083,111
+2005,budget_43_minimum,JAISALMERSAMchhatgarh,rajasthan jaisalmer sam छतगर,rajasthan jaisalmer sam hataar,1.0,0.0008087166193971318,150.0,0.0,-0.12130749290956977,491
+2005,budget_43_minimum,JHUNJHUNUNAWALGARHkumawas,rajasthan jhunjhunu nawalgarh कमवस,rajasthan jhunjhunu nawalgarh rampura,1.0,0.0008087166193971318,147.0,0.0,-0.11888134305137837,576
+2005,budget_43_minimum,BARMERSINDHARInosar,rajasthan barmer sindhari नकड़,rajasthan barmer sindhari सरल,0.0,-0.0005598807365057066,0.0,198.0,-0.1108563858281299,107
+2005,budget_43_minimum,BARMERSINDHARIsanpa manji,rajasthan barmer sindhari सणप मनज,rajasthan barmer sindhari सरण पनज,1.0,0.000653194192589991,161.0,0.0,-0.10516426500698856,107
+2005,budget_43_minimum,DUNGARPURDUNGARPURvasi,rajasthan dungarpur dungarpur वगदर,rajasthan dungarpur dungarpur मतल,0.0,-0.0005198892553267275,0.0,198.0,-0.10293807255469203,360
+2005,budget_43_minimum,CHURURAJGARHrampura,rajasthan churu rajgarh रमपर,rajasthan churu rajgarh manpura,1.0,0.0008299986356970563,123.0,0.0,-0.10208983219073792,296
+2005,budget_43_minimum,DUNGARPURBICHHIWARAchhapi,rajasthan dungarpur bichhiwara छप,rajasthan dungarpur bichhiwara बछवड,0.0,-0.0003308386170260993,66.0,351.0,-0.0942890058524383,358
+2005,budget_43_minimum,CHURURATANGARHdaudsar,rajasthan churu ratangarh दउदसर,rajasthan churu ratangarh पबसर,1.0,0.00069318567376897,134.0,0.0,-0.09288688028504198,301
+2005,budget_43_minimum,SAWAIMADHOPURBONLIkodyai,rajasthan sawai madhopur bonli कडयई,rajasthan sawai madhopur bonli थडल,1.0,0.0009704599432765581,113.0,31.0,-0.07957771534867776,839
+2005,budget_43_minimum,BARMERSINDHARIkharantiya,rajasthan barmer sindhari खरटय,rajasthan barmer sindhari कमठई,0.0,-0.00048522997163827906,322.0,470.0,-0.0718140358024653,111
+2005,budget_43_minimum,DAUSASIKRAInamaner,rajasthan dausa sikrai नमनर,rajasthan dausa sikrai मनपर,0.0,-0.0005391444129314211,37.0,167.0,-0.07008877368108475,343
+2005,budget_43_minimum,JAISALMERSAMlakha,rajasthan jaisalmer sam लख,rajasthan jaisalmer sam salkha,1.0,0.0008087166193971318,86.0,0.0,-0.06954962926815333,491
+2005,budget_43_minimum,SAWAIMADHOPURBONLIbichhidona,rajasthan sawai madhopur bonli बचछदन,rajasthan sawai madhopur bonli भडत,0.0,-0.00048522997163827906,69.0,187.0,-0.05725713665331693,840
+2005,budget_43_minimum,SAWAIMADHOPURBONLIsakra,rajasthan sawai madhopur bonli सकड,rajasthan sawai madhopur bonli तरनपर,0.0,-0.00048522997163827906,81.0,183.0,-0.04949345710710446,840
+2005,budget_43_minimum,GANGANAGARANUPGARH65 gb,rajasthan sri ganganagar anupgarh 65 ज ब,rajasthan sri ganganagar anupgarh 6 प,0.0,-0.00040435830969856584,76.0,192.0,-0.04690556392503364,364
+2005,budget_43_minimum,BARMERSINDHARIkhudala,rajasthan barmer sindhari खडल,rajasthan barmer sindhari नखड़,0.0,-0.00048522997163827906,111.0,207.0,-0.046582077277274786,111
+2005,budget_43_minimum,JAIPURSANGANERkalwada,rajasthan jaipur sanganer कलवड,rajasthan jaipur sanganer लखन,0.0,-0.00015163436613696218,11.0,211.0,-0.030326873227392435,461
+2005,budget_43_minimum,DAUSASIKRAInandari,rajasthan dausa sikrai नदर,rajasthan dausa sikrai नमनर,0.0,-0.0004411181560347991,31.0,37.0,-0.0026467089362087947,344
+2005,budget_43_minimum,SAWAIMADHOPURBONLItaranpur,rajasthan sawai madhopur bonli तरनपर,rajasthan sawai madhopur bonli बपई,0.0,0.0,183.0,109.0,-0.0,835
+2005,budget_43_minimum,SAWAIMADHOPURBONLIbapuai,rajasthan sawai madhopur bonli बपई,rajasthan sawai madhopur bonli कडयई,1.0,0.0,109.0,113.0,0.0,837
+2005,budget_43_minimum,BHARATPURNADBAInam,rajasthan bharatpur nadbai नम,rajasthan bharatpur nadbai नयठ,0.0,-0.00024261498581913953,8.0,7.0,0.00024261498581913953,141
+2005,budget_43_maximum,SAWAIMADHOPURKHANDARkhandar,rajasthan sawai madhopur khandar खणडर,rajasthan sawai madhopur khandar टडर,1.0,0.0008087166193971318,436.0,216.0,-0.177917656267369,848
+2005,budget_43_maximum,SAWAIMADHOPURKHANDARbarnavada,rajasthan sawai madhopur khandar बरनवद,rajasthan sawai madhopur khandar खणडवल,0.0,0.0,42.0,70.0,0.0,846
+2005,budget_43_maximum,BIKANERNOKHAjaisalsar,rajasthan bikaner nokha जसलसर,rajasthan bikaner nokha sajanwasi,0.0,-0.00030326873227392437,161.0,0.0,0.048826265896101825,234
+2005,budget_43_maximum,SAWAIMADHOPURBAMANWASpiplai,rajasthan sawai madhopur bamanwas पपलई,rajasthan sawai madhopur bamanwas फलवड,0.0,-0.00030326873227392437,209.0,48.0,0.048826265896101825,831
+2005,budget_43_maximum,JAISALMERSAMlunar,rajasthan jaisalmer sam लणर,rajasthan jaisalmer sam मलण,0.0,-0.00020217915484928292,361.0,73.0,0.05822759659659348,492
+2005,budget_43_maximum,HANUMANGARHNOHARparlika,rajasthan hanumangarh nohar परलक,rajasthan hanumangarh nohar टपरय,0.0,-0.00030326873227392437,251.0,53.0,0.06004720899023702,412
+2005,budget_43_maximum,JAISALMERJAISALMERchandan,rajasthan jaisalmer jaisalmer चधन,rajasthan jaisalmer jaisalmer hadda,0.0,-0.00030326873227392437,202.0,0.0,0.06126028391933272,488
+2005,budget_43_maximum,SAWAIMADHOPURSAWAI MADHOPURadalwarakala,rajasthan sawai madhopur sawai madhopur जटवड कल,rajasthan sawai madhopur sawai madhopur करमद,1.0,0.0006065374645478487,85.0,187.0,0.06186682138388057,851
+2005,budget_43_maximum,JAISALMERSAMkotdi,rajasthan jaisalmer sam कटड,rajasthan jaisalmer sam कनई,1.0,0.0004043583096985659,32.0,238.0,0.08329781179790458,497
+2005,budget_43_maximum,JAIPURDUDUrasili,rajasthan jaipur dudu रसल,rajasthan jaipur dudu सल,0.0,-0.000653194192589991,142.0,9.0,0.0868748276144688,430
+2005,budget_43_maximum,GANGANAGARSURATGARHgurusarmodiya,rajasthan sri ganganagar suratgarh गरसर मडय,rajasthan sri ganganagar suratgarh ऐट,0.0,-0.0006739305161642765,129.0,0.0,0.08693703658519167,392
+2005,budget_43_maximum,SAWAIMADHOPURBONLIudgaon,rajasthan sawai madhopur bonli उद गव,rajasthan sawai madhopur bonli बरद,1.0,0.0008087166193971318,96.0,207.0,0.08976754475308163,838
+2005,budget_43_maximum,JAISALMERSAMkanoi,rajasthan jaisalmer sam कनई,rajasthan jaisalmer sam तनट,0.0,-0.00040435830969856584,238.0,0.0,0.09623727770825867,491
+2005,budget_43_maximum,CHURURAJGARHdogawa,rajasthan churu rajgarh डकव,rajasthan churu rajgarh gagrwas,0.0,-0.0003830762933986413,256.0,0.0,0.09806753111005218,296
+2005,budget_43_maximum,JAISALMERSAMkhuivala,rajasthan jaisalmer sam खईयल,rajasthan jaisalmer sam लख,0.0,-0.0003732538243371377,359.0,86.0,0.10189829404403859,494
+2005,budget_43_maximum,GANGANAGARGANGANAGARsahuwala,rajasthan sri ganganagar ganganagar सहवल,rajasthan sri ganganagar ganganagar लधवल,0.0,-0.00040435830969856584,260.0,0.0,0.10513316052162712,369
+2005,budget_43_maximum,BIKANERLUNKARANSARlunkaransar,rajasthan bikaner lunkaransar लनकरनसर,rajasthan bikaner lunkaransar सरनण,0.0,-0.00048522997163827906,224.0,0.0,0.1086915136469745,227
+2005,budget_43_maximum,CHURUTARANAGARhadiyal,rajasthan churu taranagar हडयल,rajasthan churu taranagar बनयल,0.0,-0.00030326873227392437,359.0,0.0,0.10887347488633885,316
+2005,budget_43_maximum,BANSWARAANANDPURIanandpuri,rajasthan banswara anandpuri आननदपर,rajasthan banswara anandpuri कड़द,0.0,-0.00040435830969856584,350.0,78.0,0.10998546023800991,84
+2005,budget_43_maximum,SAWAIMADHOPURKHANDARtodara,rajasthan sawai madhopur khandar टडर,rajasthan sawai madhopur khandar हलनद,0.0,-0.0005198892553267275,216.0,0.0,0.11229607915057313,844
+2005,budget_43_maximum,HANUMANGARHNOHARtopria,rajasthan hanumangarh nohar टपरय,rajasthan hanumangarh nohar परलक,1.0,0.0005708587901626812,53.0,251.0,0.11303004045221088,409
+2005,budget_43_maximum,SAWAIMADHOPURSAWAI MADHOPURkarmoda,rajasthan sawai madhopur sawai madhopur करमद,rajasthan sawai madhopur sawai madhopur डगर,0.0,-0.0006065374645478487,187.0,0.0,0.11342250587044772,851
+2005,budget_43_maximum,BARMERSINDHARIshivkar,rajasthan barmer sindhari शवकर,rajasthan barmer sindhari सरल,1.0,0.0007278449574574185,39.0,198.0,0.11572734823572954,111
+2005,budget_43_maximum,BUNDIHINDOLIalod,rajasthan bundi hindoli अलद,rajasthan bundi hindoli बसल,0.0,-0.0006065374645478487,197.0,6.0,0.11584865572863912,236
+2005,budget_43_maximum,BARMERBARMERmarundi,rajasthan barmer barmer मरड़,rajasthan barmer barmer आट,1.0,0.0009098061968217732,201.0,329.0,0.11645519319318696,98
+2005,budget_43_maximum,JAISALMERJAISALMERchatrial,rajasthan jaisalmer jaisalmer छतरल,rajasthan jaisalmer jaisalmer ghantiyali,0.0,-0.00048522997163827906,254.0,0.0,0.12324841279612288,483
+2005,budget_43_maximum,SAWAIMADHOPURBAMANWASphulwara,rajasthan sawai madhopur bamanwas फलवड,rajasthan sawai madhopur bamanwas पपलई,1.0,0.0007719567730608985,48.0,209.0,0.12428504046280466,829
+2005,budget_43_maximum,JHUNJHUNUNAWALGARHmandasi,rajasthan jhunjhunu nawalgarh मडस,rajasthan jhunjhunu nawalgarh महनवड,1.0,0.0006065374645478487,13.0,218.0,0.12434018023230899,574
+2005,budget_43_maximum,JHUNJHUNUNAWALGARHmohanbari,rajasthan jhunjhunu nawalgarh महनवड,rajasthan jhunjhunu nawalgarh मडस,0.0,-0.0006065374645478487,218.0,13.0,0.12434018023230899,574
+2005,budget_43_maximum,JAISALMERJAISALMERchinnu,rajasthan jaisalmer jaisalmer चनन,rajasthan jaisalmer jaisalmer चधन,1.0,0.0008087166193971318,44.0,202.0,0.12777722586474682,485
+2005,budget_43_maximum,JHUNJHUNUALSISARpatoda,rajasthan jhunjhunu alsisar पटद,rajasthan jhunjhunu alsisar naand,0.0,-0.00040435830969856584,319.0,0.0,0.1289903007938425,543
+2005,budget_43_maximum,BIKANERNOKHAjasrasar,rajasthan bikaner nokha जसरसर,rajasthan bikaner nokha जसलसर,1.0,0.0009098061968217732,13.0,161.0,0.13465131712962242,234
+2005,budget_43_maximum,JAIPURSANGANERmuhana,rajasthan jaipur sanganer महन,rajasthan jaipur sanganer मदऊ,0.0,-0.00040435830969856584,337.0,0.0,0.13626875036841668,467
+2005,budget_43_maximum,BUNDIHINDOLIbasoli,rajasthan bundi hindoli बसल,rajasthan bundi hindoli अलद,1.0,0.0007278449574574185,6.0,197.0,0.13901838687436693,238
+2005,budget_43_maximum,JAIPURDUDUasalpur,rajasthan jaipur dudu आसलपर,rajasthan jaipur dudu हबसपर,1.0,0.0005598807365057066,12.0,337.0,0.18196123936435465,430
+2005,budget_43_maximum,BIKANERKOLAYATbarsalpur,rajasthan bikaner kolayat बरसलपर,rajasthan bikaner kolayat भरसर,0.0,-0.0008087166193971317,227.0,0.0,0.1835786726031489,220
+2005,budget_43_maximum,JAISALMERSAMhabur,rajasthan jaisalmer sam हबर,rajasthan jaisalmer sam dabari,0.0,-0.00040435830969856584,482.0,0.0,0.19490070527470874,491
+2005,budget_43_maximum,DUNGARPURDUNGARPURragela,rajasthan dungarpur dungarpur उपरगव,rajasthan dungarpur dungarpur मतल,1.0,0.0010108957742464147,0.0,198.0,0.20015736330079012,361
+2005,budget_43_maximum,SAWAIMADHOPURKHANDARbaharavanda khurd,rajasthan sawai madhopur khandar बहरवणड खरद,rajasthan sawai madhopur khandar बरनवद,0.0,-0.0005198892553267275,455.0,42.0,0.21471426244993844,844
+2005,budget_43_maximum,BANSWARAANANDPURIkarda,rajasthan banswara anandpuri कड़द,rajasthan banswara anandpuri आननदपर,1.0,0.0008087166193971318,78.0,350.0,0.21997092047601985,84
+2005,budget_43_maximum,JAISALMERSAMlakha,rajasthan jaisalmer sam लख,rajasthan jaisalmer sam खईयल,1.0,0.0008087166193971318,86.0,359.0,0.22077963709541698,491
+2005,budget_43_maximum,JAISALMERSAMmulana,rajasthan jaisalmer sam मलण,rajasthan jaisalmer sam लणर,1.0,0.0008087166193971318,73.0,361.0,0.23291038638637396,491
+2005,budget_43_maximum,SAWAIMADHOPURKHANDARkhandevala,rajasthan sawai madhopur khandar खणडवल,rajasthan sawai madhopur khandar खणडर,1.0,0.0007278449574574185,70.0,436.0,0.2663912544294152,843
+2010,budget_43_minimum,JAISALMERSAMhabur,rajasthan jaisalmer sam हबर,rajasthan jaisalmer sam dabari,1.0,0.0008289031199149528,482.0,0.0,-0.39953130379900725,483
+2010,budget_43_minimum,BARMERSINDHARIkamthai,rajasthan barmer sindhari कमठई,rajasthan barmer sindhari bamani,1.0,0.0007368027732577359,470.0,0.0,-0.34629730343113585,106
+2010,budget_43_minimum,SAWAIMADHOPURKHANDARbarnavada,rajasthan sawai madhopur khandar बरनवद,rajasthan sawai madhopur khandar बहरवणड खरद,0.0,-0.0006315452342209164,42.0,455.0,-0.26082818173323846,836
+2010,budget_43_minimum,SAWAIMADHOPURKHANDARchhan,rajasthan sawai madhopur khandar छन,rajasthan sawai madhopur khandar खणडर,0.0,-0.0007368027732577358,104.0,436.0,-0.24461852072156828,837
+2010,budget_43_minimum,BARMERSINDHARInokhda,rajasthan barmer sindhari नखड़,rajasthan barmer sindhari हड,0.0,-0.0006907525999291273,207.0,544.0,-0.2327836261761159,108
+2010,budget_43_minimum,SAWAIMADHOPURBONLIbahter,rajasthan sawai madhopur bonli बहतड,rajasthan sawai madhopur bonli बल,0.0,-0.0007033117381096569,165.0,493.0,-0.23068625009996746,827
+2010,budget_43_minimum,BHARATPURKAMANpai,rajasthan bharatpur kaman पई,rajasthan bharatpur kaman bamni,1.0,0.0007894315427761456,290.0,0.0,-0.22893514740508222,132
+2010,budget_43_minimum,BARMERSINDHARIhodu,rajasthan barmer sindhari हड,rajasthan barmer sindhari चड क ढण,1.0,0.0004144515599574764,544.0,0.0,-0.22546164861686718,108
+2010,budget_43_minimum,JHUNJHUNUJHUNJHUNUnayasar,rajasthan jhunjhunu jhunjhunu नयसर,rajasthan jhunjhunu jhunjhunu dorasar,1.0,0.0006315452342209164,239.0,0.0,-0.150939310978799,554
+2010,budget_43_minimum,SAWAIMADHOPURKHANDARkhandar,rajasthan sawai madhopur khandar खणडर,rajasthan sawai madhopur khandar अनयल,1.0,0.00036840138662886794,436.0,31.0,-0.14920256158469153,837
+2010,budget_43_minimum,JAISALMERSAMkanoi,rajasthan jaisalmer sam कनई,rajasthan jaisalmer sam तनट,1.0,0.0006078622879376321,238.0,0.0,-0.14467122452915643,482
+2010,budget_43_minimum,CHURUTARANAGARsrayan,rajasthan churu taranagar सरयण,rajasthan churu taranagar बय,1.0,0.0004912018488384905,419.0,158.0,-0.12820368254684603,308
+2010,budget_43_minimum,CHURUTARANAGARalayala,rajasthan churu taranagar अलयल,rajasthan churu taranagar सरयण,0.0,-0.0006140023110481133,220.0,419.0,-0.12218645989857455,308
+2010,budget_43_minimum,DUNGARPURDUNGARPURvasi,rajasthan dungarpur dungarpur वगदर,rajasthan dungarpur dungarpur मतल,0.0,-0.0006140023110481133,0.0,198.0,-0.12157245758752643,353
+2010,budget_43_minimum,SAWAIMADHOPURSAWAI MADHOPURkarmoda,rajasthan sawai madhopur sawai madhopur करमद,rajasthan sawai madhopur sawai madhopur gogor,1.0,0.0006315452342209164,187.0,0.0,-0.11809895879931136,843
+2010,budget_43_minimum,BIKANERBIKANERudairamsar,rajasthan bikaner bikaner उदरमसर,rajasthan bikaner bikaner बदरसर,1.0,0.0006140023110481133,191.0,0.0,-0.11727444141018964,206
+2010,budget_43_minimum,JHUNJHUNUJHUNJHUNUindali,rajasthan jhunjhunu jhunjhunu इणडल,rajasthan jhunjhunu jhunjhunu नआ,1.0,0.0006315452342209164,185.0,9.0,-0.11115196122288129,554
+2010,budget_43_minimum,BHARATPURNADBAIbaroliran,rajasthan bharatpur nadbai बरल छर,rajasthan bharatpur nadbai बरउल रन,1.0,0.0006315452342209164,232.0,62.0,-0.10736268981755578,137
+2010,budget_43_minimum,DUNGARPURDUNGARPURkhempur,rajasthan dungarpur dungarpur khemaroo,rajasthan dungarpur dungarpur खड,0.0,-0.0006140023110481133,0.0,171.0,-0.10499439518922737,353
+2010,budget_43_minimum,HANUMANGARHBHADRAdabari,rajasthan hanumangarh bhadra डबड,rajasthan hanumangarh bhadra भरन,1.0,0.0008289031199149528,132.0,8.0,-0.10278398686945416,393
+2010,budget_43_minimum,BARMERSINDHARIkhudasa,rajasthan barmer sindhari खडस,rajasthan barmer sindhari sadecha,1.0,0.00047365892566568734,216.0,0.0,-0.10231032794378847,109
+2010,budget_43_minimum,BARMERSINDHARIdankha,rajasthan barmer sindhari दख,rajasthan barmer sindhari kagon ki dhani,1.0,0.0008037848435538937,126.0,0.0,-0.1012768902877906,107
+2010,budget_43_minimum,BARMERSINDHARIdhanva,rajasthan barmer sindhari धनव,rajasthan barmer sindhari अणखय,1.0,0.0005526020799433019,174.0,0.0,-0.09615276191013453,110
+2010,budget_43_minimum,BARMERBARMERundkha,rajasthan barmer barmer उणडख,rajasthan barmer barmer naukh,1.0,0.0006907525999291273,136.0,0.0,-0.09394235359036131,94
+2010,budget_43_minimum,JHUNJHUNUJHUNJHUNUsiriyasar kalan,rajasthan jhunjhunu jhunjhunu सरयसर कल,rajasthan jhunjhunu jhunjhunu नयसर,0.0,-0.0004736589256656873,46.0,239.0,-0.09141617265347765,554
+2010,budget_43_minimum,JAISALMERSAMmandai,rajasthan jaisalmer sam मणडई,rajasthan jaisalmer sam कनई,0.0,-0.0004973418719489717,57.0,238.0,-0.09001887882276387,482
+2010,budget_43_minimum,JAISALMERSAMsiyamber,rajasthan jaisalmer sam सयमबर,rajasthan jaisalmer sam सम,1.0,0.0006078622879376321,572.0,428.0,-0.08753216946301902,482
+2010,budget_43_minimum,JAISALMERJAISALMERbasanpir,rajasthan jaisalmer jaisalmer बसनपर जन,rajasthan jaisalmer jaisalmer बकलसर,1.0,0.0005894422186061886,148.0,0.0,-0.08723744835371591,474
+2010,budget_43_minimum,JHUNJHUNUJHUNJHUNUnooan,rajasthan jhunjhunu jhunjhunu नआ,rajasthan jhunjhunu jhunjhunu इणडल,0.0,-0.0004736589256656873,9.0,185.0,-0.08336397091716097,554
+2010,budget_43_minimum,JAISALMERSAMchhatgarh,rajasthan jaisalmer sam छतगर,rajasthan jaisalmer sam hataar,1.0,0.0005526020799433019,150.0,0.0,-0.08289031199149528,486
+2010,budget_43_minimum,HANUMANGARHBHADRAutradabas,rajasthan hanumangarh bhadra उततरदबस,rajasthan hanumangarh bhadra डबड,0.0,-0.0006907525999291273,14.0,132.0,-0.08150880679163702,391
+2010,budget_43_minimum,JAISALMERSAMsam,rajasthan jaisalmer sam सम,rajasthan jaisalmer sam सयमबर,0.0,-0.0005526020799433019,428.0,572.0,-0.07957469951183548,484
+2010,budget_43_minimum,SAWAIMADHOPURSAWAI MADHOPURmakholi,rajasthan sawai madhopur sawai madhopur मखल,rajasthan sawai madhopur sawai madhopur करमद,0.0,-0.0005526020799433019,60.0,187.0,-0.07018046415279934,841
+2010,budget_43_minimum,BARMERSINDHARIkadanadi,rajasthan barmer sindhari कद नड,rajasthan barmer sindhari कमठई,0.0,-0.0003014193163327101,257.0,470.0,-0.06420231437886725,107
+2010,budget_43_minimum,BARMERSINDHARInosar,rajasthan barmer sindhari नकड़,rajasthan barmer sindhari नखड़,0.0,-0.0003014193163327101,0.0,207.0,-0.062393798480870996,107
+2010,budget_43_minimum,SAWAIMADHOPURBONLIgotod,rajasthan sawai madhopur bonli गतड,rajasthan sawai madhopur bonli बहतड,0.0,-0.0005526020799433019,59.0,165.0,-0.05857582047399,831
+2010,budget_43_minimum,BIKANERBIKANERkatriyasar,rajasthan bikaner bikaner कतरयसर,rajasthan bikaner bikaner उदरमसर,0.0,-0.0004420816639546415,69.0,191.0,-0.053933963002466265,207
+2010,budget_43_minimum,BARMERSINDHARIsada,rajasthan barmer sindhari सड़,rajasthan barmer sindhari कद नड,0.0,-0.0003684013866288679,122.0,257.0,-0.04973418719489717,111
+2010,budget_43_minimum,SAWAIMADHOPURBONLImamdoli,rajasthan sawai madhopur bonli ममडल,rajasthan sawai madhopur bonli chandnoli,1.0,0.0005526020799433019,70.0,0.0,-0.038682145596031135,831
+2010,budget_43_minimum,JHUNJHUNUJHUNJHUNUajari kalan,rajasthan jhunjhunu jhunjhunu अजड कल,rajasthan jhunjhunu jhunjhunu सरयसर कल,0.0,-0.0008289031199149528,21.0,46.0,-0.02072257799787382,553
+2010,budget_43_minimum,BHARATPURKAMANbamanwadi,rajasthan bharatpur kaman bamni,rajasthan bharatpur kaman भडर,0.0,0.0,0.0,150.0,0.0,131
+2010,budget_43_minimum,SAWAIMADHOPURBONLIbonli,rajasthan sawai madhopur bonli बल,rajasthan sawai madhopur bonli ममडल,0.0,0.0,493.0,70.0,-0.0,830
+2010,budget_43_minimum,SAWAIMADHOPURKHANDARbaharavanda khurd,rajasthan sawai madhopur khandar बहरवणड खरद,rajasthan sawai madhopur khandar बरनवद,1.0,0.0,455.0,42.0,-0.0,835
+2010,budget_43_maximum,JAISALMERSAMdevda,rajasthan jaisalmer sam दवड,rajasthan jaisalmer sam दव,1.0,0.0004144515599574764,161.0,78.0,-0.03439947947647054,485
+2010,budget_43_maximum,JHUNJHUNUBUHANAghasera,rajasthan jhunjhunu buhana घसड,rajasthan jhunjhunu buhana ढण,0.0,-0.0005526020799433019,27.0,0.0,0.01492025615846915,542
+2010,budget_43_maximum,JHUNJHUNUCHIRAWAnarhar,rajasthan jhunjhunu chirawa नरहड,rajasthan jhunjhunu chirawa चनन,1.0,0.00036840138662886794,71.0,216.0,0.053418201061185853,548
+2010,budget_43_maximum,JAISALMERSAMdeda,rajasthan jaisalmer sam डढ,rajasthan jaisalmer sam दवड,1.0,0.0005526020799433019,51.0,161.0,0.060786228793763206,484
+2010,budget_43_maximum,BARMERSINDHARIkhudala,rajasthan barmer sindhari खडल,rajasthan barmer sindhari चव,1.0,0.00047365892566568734,111.0,268.0,0.07436445132951292,109
+2010,budget_43_maximum,SAWAIMADHOPURBONLIbagdoli,rajasthan sawai madhopur bonli बगडल,rajasthan sawai madhopur bonli बरद,1.0,0.0007368027732577359,76.0,207.0,0.0965211632967634,826
+2010,budget_43_maximum,GANGANAGARGANGANAGARsadhuwali,rajasthan sri ganganagar ganganagar सधवल,rajasthan sri ganganagar ganganagar सहवल,1.0,0.00046050173328608484,43.0,260.0,0.0999288761230804,361
+2010,budget_43_maximum,JHUNJHUNUALSISARgangiyasar,rajasthan jhunjhunu alsisar गगयसर,rajasthan jhunjhunu alsisar जबसर,0.0,-0.00042507852303330917,255.0,13.0,0.10286900257406081,533
+2010,budget_43_maximum,SAWAIMADHOPURBONLIbhadoti,rajasthan sawai madhopur bonli भडत,rajasthan sawai madhopur bonli bharja nadi,0.0,-0.0005526020799433019,187.0,0.0,0.10333658894939746,829
+2010,budget_43_maximum,BUNDIHINDOLIalod,rajasthan bundi hindoli अलद,rajasthan bundi hindoli बसल,0.0,-0.0005526020799433019,197.0,6.0,0.10554699726917066,233
+2010,budget_43_maximum,BUNDIHINDOLIbasoli,rajasthan bundi hindoli बसल,rajasthan bundi hindoli अलद,1.0,0.0005526020799433019,6.0,197.0,0.10554699726917066,234
+2010,budget_43_maximum,JAIPURSANGANERkalwada,rajasthan jaipur sanganer कलवड,rajasthan jaipur sanganer लखन,1.0,0.0005526020799433019,11.0,211.0,0.11052041598866037,456
+2010,budget_43_maximum,CHURUTARANAGARgajuwas,rajasthan churu taranagar togawas,rajasthan churu taranagar गजवस,1.0,0.0005526020799433019,0.0,204.0,0.11273082430843359,311
+2010,budget_43_maximum,DAUSASIKRAIgeejgarh,rajasthan dausa sikrai garh,rajasthan dausa sikrai गजगढ,1.0,0.00046050173328608484,0.0,248.0,0.11420442985494904,335
+2010,budget_43_maximum,CHURUTARANAGARkohina,rajasthan churu taranagar कहण,rajasthan churu taranagar भनण,1.0,0.0004912018488384905,87.0,326.0,0.11739724187239924,308
+2010,budget_43_maximum,SAWAIMADHOPURBONLInimod (rathod),rajasthan sawai madhopur bonli रठड नमद,rajasthan sawai madhopur bonli भडत,1.0,0.0007368027732577359,21.0,187.0,0.12230926036078416,826
+2010,budget_43_maximum,JAISALMERSAMkunda,rajasthan jaisalmer sam कणड,rajasthan jaisalmer sam लणर,1.0,0.0006078622879376321,154.0,361.0,0.12582749360308984,482
+2010,budget_43_maximum,SAWAIMADHOPURBONLIdatuli,rajasthan sawai madhopur bonli दतल,rajasthan sawai madhopur bonli पपलद,1.0,0.0005526020799433019,50.0,282.0,0.12820368254684603,831
+2010,budget_43_maximum,CHURUTARANAGARredi,rajasthan churu taranagar रड,rajasthan churu taranagar dheegi,0.0,-0.0006140023110481133,216.0,0.0,0.13262449918639246,308
+2010,budget_43_maximum,CHURUTARANAGARhadiyal,rajasthan churu taranagar हडयल,rajasthan churu taranagar बय,0.0,-0.0006631224959319622,359.0,158.0,0.13328762168232441,309
+2010,budget_43_maximum,CHURUTARANAGARalayala,rajasthan churu taranagar अलयल,rajasthan churu taranagar बनयल,0.0,-0.0006140023110481133,220.0,0.0,0.13508050843058492,308
+2010,budget_43_maximum,CHURURAJGARHdogawa,rajasthan churu rajgarh डकव,rajasthan churu rajgarh gagrwas,0.0,-0.0005526020799433019,256.0,0.0,0.14146613246548528,292
+2010,budget_43_maximum,GANGANAGARGANGANAGARsahuwala,rajasthan sri ganganagar ganganagar सहवल,rajasthan sri ganganagar ganganagar लधवल,0.0,-0.0005526020799433019,260.0,0.0,0.1436765407852585,362
+2010,budget_43_maximum,DAUSALALSOTdidwana,rajasthan dausa lalsot इनदव,rajasthan dausa lalsot डडवन,1.0,0.0006447024266005187,0.0,224.0,0.1444133435585162,330
+2010,budget_43_maximum,BARMERSINDHARIkarna,rajasthan barmer sindhari करन,rajasthan barmer sindhari darguda,0.0,-0.0006907525999291273,212.0,0.0,0.14643955118497498,108
+2010,budget_43_maximum,JAIPURSANGANERlakhana,rajasthan jaipur sanganer लखन,rajasthan jaipur sanganer कलवड,0.0,-0.0007368027732577358,211.0,11.0,0.14736055465154715,453
+2010,budget_43_maximum,BIKANERKOLAYATbarsalpur,rajasthan bikaner kolayat बरसलपर,rajasthan bikaner kolayat भरसर,0.0,-0.0006631224959319622,227.0,0.0,0.15052880657655543,216
+2010,budget_43_maximum,JHUNJHUNUJHUNJHUNUkuharoo,rajasthan jhunjhunu jhunjhunu कहड,rajasthan jhunjhunu jhunjhunu भर,1.0,0.0006315452342209164,19.0,266.0,0.15599167285256635,554
+2010,budget_43_maximum,BIKANERDUNGARGARHbigga,rajasthan bikaner dungargarh बगग,rajasthan bikaner dungargarh बणसर,0.0,-0.0007894315427761456,200.0,0.0,0.15788630855522912,210
+2010,budget_43_maximum,CHURUTARANAGARbhanin,rajasthan churu taranagar भनण,rajasthan churu taranagar कहण,0.0,-0.0006631224959319622,326.0,87.0,0.15848627652773897,309
+2010,budget_43_maximum,DUNGARPURDUNGARPURragela,rajasthan dungarpur dungarpur उपरगव,rajasthan dungarpur dungarpur मतल,1.0,0.0008289031199149528,0.0,198.0,0.16412281774316065,354
+2010,budget_43_maximum,BARMERSINDHARIchawa,rajasthan barmer sindhari चव,rajasthan barmer sindhari uchiya,0.0,-0.0006315452342209164,268.0,0.0,0.16925412277120558,109
+2010,budget_43_maximum,JAIPURSANGANERmahapura,rajasthan jaipur sanganer महपर,rajasthan jaipur sanganer महन,1.0,0.0005526020799433019,22.0,337.0,0.1740696551821401,456
+2010,budget_43_maximum,JAIPURDUDUaakoda,rajasthan jaipur dudu आकद,rajasthan jaipur dudu बरज,0.0,-0.0005526020799433019,371.0,54.0,0.1751748593420267,422
+2010,budget_43_maximum,JAISALMERSAMlunar,rajasthan jaisalmer sam लणर,rajasthan jaisalmer sam उणड,0.0,-0.0004973418719489717,361.0,0.0,0.17954041577357877,482
+2010,budget_43_maximum,JAIPURSANGANERmuhana,rajasthan jaipur sanganer महन,rajasthan jaipur sanganer मदऊ,0.0,-0.0005526020799433019,337.0,0.0,0.18622690094089273,456
+2010,budget_43_maximum,JAIPURDUDUgadota,rajasthan jaipur dudu गडत,rajasthan jaipur dudu आकद,1.0,0.0005526020799433019,11.0,371.0,0.19893674877958867,421
+2010,budget_43_maximum,JHUNJHUNUALSISARjabasar,rajasthan jhunjhunu alsisar जबसर,rajasthan jhunjhunu alsisar गगयसर,1.0,0.0008289031199149528,13.0,255.0,0.20059455501941859,537
+2010,budget_43_maximum,JAISALMERSAMdav,rajasthan jaisalmer sam दव,rajasthan jaisalmer sam सम,1.0,0.0006078622879376321,78.0,428.0,0.21275180077817124,482
+2010,budget_43_maximum,JHUNJHUNUCHIRAWAchanana,rajasthan jhunjhunu chirawa चनन,rajasthan jhunjhunu chirawa कठन,1.0,0.0006631224959319622,216.0,543.0,0.21684105616975163,550
+2010,budget_43_maximum,JHUNJHUNUBUHANAgada khera,rajasthan jhunjhunu buhana गडखड,rajasthan jhunjhunu buhana घसड,0.0,-0.0005526020799433019,440.0,27.0,0.22822465901658368,541
+2010,budget_43_maximum,JHUNJHUNUCHIRAWAkithana,rajasthan jhunjhunu chirawa कठन,rajasthan jhunjhunu chirawa नरहड,0.0,-0.0004912018488384905,543.0,71.0,0.23184727265176752,546
+2010,budget_43_maximum,JAISALMERSAMsam,rajasthan jaisalmer sam सम,rajasthan jaisalmer sam salkha,0.0,-0.0005526020799433019,428.0,0.0,0.2365136902157332,484

@@ -1,0 +1,11 @@
+"match_status","n"
+"ambiguous_election_match",132
+"ambiguous_gp_match",37
+"closer_election_exists",1570
+"exact",1803
+"fuzzy",1608
+"missing_election_fields",308
+"no_census_2001_mapping",17
+"no_district_candidates",192
+"outside_distance_cutoff",2110
+"unresolved_geography",240

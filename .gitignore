@@ -1,0 +1,11 @@
+.Rhistory
+.RData
+.Rproj.user/
+renv/library/
+renv/staging/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+.DS_Store

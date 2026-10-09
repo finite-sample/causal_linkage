@@ -1,0 +1,6 @@
+"path","sha256"
+"/Users/soodoku/Documents/GitHub/quota_spending/data/raj/mnrega_elex_raj_05_10.parquet","d624700150f78be474c8e22754ead4d0b9ff4008c70b4bf064a0fa90774de1ca"
+"/Users/soodoku/Documents/GitHub/quota_spending/data/mnrega/mnrega_r6.parquet","0f60ff4b71aec2196271e57598e41bbd4eb3909456a9f3bb2ccfaf40e546913a"
+"/Users/soodoku/Documents/GitHub/quota_spending/data/mnrega/raj_mnrega_transliteration.csv","86593d1f73da3228f76b15df814f567a80c5f945653f49dae211d7828f7cb02c"
+"/Users/soodoku/Documents/GitHub/causal_linkage/application/results/candidate_graph.parquet","f3cfb5a0c2cb236760a0f0d511cdefb8f21f2bbfcda95f92068d8d26d40df984"
+"/Users/soodoku/Documents/GitHub/causal_linkage/application/results/lottery/witnesses.parquet","fc612e0b1ed52ae1ebba53d4ed74c0763df6fa00e0db27aa92ab71f973c20e4e"
