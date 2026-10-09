@@ -108,61 +108,6 @@ enumerate_linkages <- function(graph, outside = rep(FALSE, nrow(graph)),
   }
   do.call(rbind, maps)
 }
-# Uniform unconditional coverage under complete random assignment and known
-# potential-outcome support. Graph containment failure adds delta to alpha.
-causal_bounds <- function(z, outcomes, graph, support, alpha = .05, ...) {
-  check_assignment(z)
-  if (length(support) != 2 || any(!is.finite(support)) ||
-        support[1] > support[2] || any(outcomes < support[1] | outcomes > support[2]) ||
-        alpha <= 0 || alpha >= 1) {
-    stop("Invalid support or alpha")
-  }
-  range <- linkage_bounds(contrast_weights(z), outcomes, graph, support, ...)
-  width <- diff(support)
-  radius <- width * sqrt(log(4 / alpha) / 2) *
-    (1 / sqrt(sum(z)) + 1 / sqrt(sum(1 - z)))
-  c(
-    lower = max(-width, range$lower - radius),
-    upper = min(width, range$upper + radius),
-    estimator_lower = range$lower, estimator_upper = range$upper
-  )
-}
-roster_bounds <- function(outcomes, graph, off_graph_budget = 0L,
-                          trusted = NULL, trusted_error_budget = 0L) {
-  m <- nrow(graph)
-  n <- length(outcomes)
-  if (m >= n) stop("Roster requires treated and control units")
-  b <- linkage_bounds(rep(n / (m * (n - m)), m), outcomes, graph,
-    off_graph_budget = off_graph_budget, trusted = trusted,
-    trusted_error_budget = trusted_error_budget
-  )
-  offset <- sum(outcomes) / (n - m)
-  c(lower = b$lower - offset, upper = b$upper - offset)
-}
-review_priority <- function(weights, outcomes, graph) {
-  base <- linkage_bounds(weights, outcomes, graph)
-  base_width <- base$upper - base$lower
-  result <- lapply(seq_len(nrow(graph)), function(i) {
-    widths <- vapply(which(graph[i, ]), function(j) {
-      trusted <- rep(NA_integer_, nrow(graph))
-      trusted[i] <- j
-      b <- tryCatch(linkage_bounds(weights, outcomes, graph, trusted = trusted),
-        error = function(e) NULL
-      )
-      if (is.null(b)) {
-        return(NA_real_)
-      }
-      b$upper - b$lower
-    }, numeric(1))
-    widths <- widths[is.finite(widths)]
-    data.frame(
-      record = i, width = base_width,
-      guaranteed_reduction = base_width - max(widths),
-      best_reduction = base_width - min(widths)
-    )
-  })
-  do.call(rbind, result)
-}
 sharp_null_p <- function(y, z, assignment_support = assignments(length(z), sum(z))) {
   check_assignment(z)
   if (!is.matrix(assignment_support) || anyNA(assignment_support) ||
@@ -176,10 +121,4 @@ sharp_null_p <- function(y, z, assignment_support = assignments(length(z), sum(z
   observed <- abs(contrast(y, z))
   stats <- apply(assignment_support, 1, function(a) abs(contrast(y, a)))
   mean(stats >= observed - 1e-12)
-}
-graph_null_p <- function(outcomes, z, graph) {
-  maps <- enumerate_linkages(graph)
-  if (!nrow(maps)) stop("No feasible linkage")
-  a <- assignments(length(z), sum(z))
-  max(apply(maps, 1, function(map) sharp_null_p(outcomes[map], z, a)))
 }

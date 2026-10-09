@@ -8,7 +8,7 @@
 \newcommand{\PrA}{\Pr_A}
 \input{../results/methods/macros.tex}
 \title{Exact randomization inference with uncertain record identities}
-\author{Research draft}
+\author{Gaurav Sood}
 \date{October 2026}
 \begin{document}
 \maketitle
@@ -24,9 +24,7 @@ identity-change budget that removes rejection and give a closed-form binary comp
 that uses accuracy information without candidate restrictions. Exhaustive checks establish
 agreement with direct enumeration, and an identifier-based simulation measures what the
 candidate graph adds. In these synthetic settings, gains are modest and substantial
-power loss remains. The method specializes established matching-set and sensitivity
-principles. Its inferential guarantee depends on the true linkage belonging to the stated
-set; it does not establish that membership from name scores alone.
+power loss remains. The guarantee holds when the true linkage belongs to the stated set.
 \end{abstract}
 
 \section{The question and the contribution}
@@ -46,14 +44,15 @@ whole donor records. A corrected outcome vector that cannot arise from a feasibl
 is excluded. The algorithm does not require probabilities for individual links.
 
 Optimization of statistics over matching confidence sets is established
-\cite{hall}; integer-programming sensitivity to binary outcome misclassification is also
-established \cite{heng}. Permutation-set inference under a Gaussian regression model uses
+\cite{hall}; their permutation test concerns a hypothesized matching, whereas here the
+randomness is the experimental assignment. Integer-programming sensitivity to binary
+outcome misclassification is also established \cite{heng}; here the budget counts changed
+identities rather than altered outcomes, and whole donor records are conserved under
+candidate restrictions. Permutation-set inference under a Gaussian regression model uses
 a different source of randomness \cite{ota}. The result here supplies the full-bijection
-Fisher reference law and its reduction to attainable contrasts. It uses standard assignment
-constraints, absolute-value optimization, and confidence-set maximization. The contribution
-is this causal specialization and its implementation, rather than a new optimization or
-coverage principle. Linkage-induced causal bias and loss of power already motivate a
-substantial literature \cite{wortman,tahamont}.
+Fisher reference law and its reduction to attainable contrasts, using standard assignment
+constraints, absolute-value optimization, and confidence-set maximization. Linkage-induced
+causal bias and loss of power motivate a substantial literature \cite{wortman,tahamont}.
 
 \section{Experimental units and feasible identities}
 Fix $N$ units with potential outcomes $Y_i(0),Y_i(1)$. Exactly $m$ receive treatment,
@@ -178,8 +177,7 @@ where rejection uses $p\le\alpha$. The output is zero if the containment-adjuste
 to reject and infinity if every graph-feasible map rejects. Because feasible sets grow
 with $K$, $p_{\mathrm{rob}}$ is nondecreasing, so binary search finds the first budget.
 It returns a linkage demonstrating the loss of rejection. This is an identity-constrained
-counterpart of warning accuracy for outcome misclassification \cite{heng}, not a separate
-claim to invent breakdown analysis.
+counterpart of warning accuracy for outcome misclassification \cite{heng}.
 
 \subsection{A comparator that conserves donors}
 The accuracy-only comparison retains the same $y,\pi_0,K$ and one-to-one constraint,
@@ -212,9 +210,7 @@ only solver objective values. Further checks establish scale and location invari
 and compare breakdown budgets with exhaustive search. Outcomes are centered and
 scaled before optimization and tail comparisons, then reported contrasts are returned
 in their original units. This prevents an absolute numerical tolerance from making
-small-unit outcomes appear identically zero. Exactness refers to the finite-sample
-probability and global optimization targets; solver and probability calculations
-still use floating-point tolerances, not arbitrary-precision arithmetic.
+small-unit outcomes appear identically zero.
 
 \subsection{A controlled comparison}
 A deliberately constructed example keeps the accepted map, its identity accuracy,
@@ -262,31 +258,70 @@ hypergeometric reference probabilities. Synthetic name errors with known support
 an oracle error budget do not establish performance for actual administrative linkage.
 
 \section{Scope and empirical use}
-The method applies when the experiment is completely randomized, assignment is known,
-and both files cover exactly the same units once. Blocked assignment can give different
-reference laws when a linkage moves outcomes across blocks. Partial overlap or extra
-donors can change the outcome multiset. Neither situation inherits the common-law
-shortcut. Covariate-dependent regression weights and linked treatment labels require
-separate derivations. The present null is no effect for every unit; the test is not
-an exact test of a zero average effect with heterogeneous individual effects.
-
-The Rajasthan reservation--MNREGA exercise remains a separate sensitivity application.
-It assumes the reservation lottery requested for that analysis, uses a stratified design
-and a rectangular candidate graph, and evaluates feasible reconstructions against their
-own simulated assignment laws. Those outputs are not global exact p-value endpoints
-from the theorem here. Its audit shows that dramatic coefficient movements depend on
-weak GP-name candidates admitted by concatenated geographic names. Tighter candidate
-rules greatly reduce those movements, but do not independently validate the remaining
-identities. It therefore motivates scrutiny of feasible sets rather than validating
-the present method's practical gain.
+The method covers Fisher's sharp null under complete randomization with known assignment,
+when both files contain exactly the same units once. Blocked assignment, partial overlap,
+extra donors, covariate-dependent weights, and linked treatment labels change the reference
+law and need their own derivations.
 
 For an application, supply an independently justified candidate set and error budget,
 compute the robust p-value and attaining map, and inspect the identity changes that
 matter. If whole-set coverage is uncertain, report sensitivity to omissions or a
-supported containment adjustment. The immediate empirical requirement is a validation
-sample or benchmark with independently known identities. A small maximized p-value
-then has a clear interpretation: every identity reconstruction retained by the stated
-restrictions rejects the sharp no-effect null under the experimental design.
+supported containment adjustment. A small maximized p-value means that every identity
+reconstruction retained by the stated restrictions rejects the sharp no-effect null.
+
+\appendix
+\section{Structure of the feasible contrast}
+These results describe the feasible set $\M(G)$ of perfect matchings in $G$ without
+an error budget, except where the budget is named.
+
+\begin{proposition}[Candidates refine accuracy]
+For the same $\pi_0$ and $K$, $\M(G,K)\subseteq\M(G_{\mathrm{c}},K)$, where $G_{\mathrm{c}}$
+is the complete bipartite graph. Hence $L_G\ge L_{\mathrm{c}}$, $U_G\le U_{\mathrm{c}}$,
+and $p_{\max}(G)\le p_{\max}(G_{\mathrm{c}})$.
+\end{proposition}
+\begin{proof}
+Every graph-feasible map satisfies the accuracy-only constraints. Minima, maxima and
+maximum p-values over a subset are bounded by those over the superset.
+\end{proof}
+The inequalities can be strict or equalities, and graphs with equal degrees need not be
+ordered by inclusion.
+
+\begin{proposition}[Zero width]
+Fix $\pi\in\M(G)$. For an alternating cycle exchanging the donors of distinct anchors
+$i_1,\ldots,i_r$ through edges $(i_k,\pi(i_{k+1}))\in G$ (indices cyclic), let
+\[
+ D_C=\sum_{k=1}^r w_{i_k}\{y_{\pi(i_{k+1})}-y_{\pi(i_k)}\}.
+\]
+Then $L=U$ over $\M(G)$ if and only if $D_C=0$ for every such cycle.
+\end{proposition}
+\begin{proof}
+If the width is zero, every feasible cycle flip preserves the contrast. Conversely, the
+edges on which any second perfect matching differs from $\pi$ decompose into disjoint
+alternating cycles, and the contrast difference is the sum of their $D_C$.
+\end{proof}
+A shared error budget can forbid single cycle flips while permitting coordinated ones,
+so the characterization is for $\M(G)$.
+
+\begin{proposition}[Components]
+Without a shared budget, $\M(G)$ is the Cartesian product of the perfect matchings of
+the connected components of $G$, and $L$, $U$ and $U-L$ add across components.
+A component within one treatment arm, or whose donors share one outcome value,
+contributes zero width. If component $b$ is complete bipartite with $n_b$ anchors,
+$t_b$ of them treated, and sorted donor outcomes $y_{b(1)}\le\cdots\le y_{b(n_b)}$, its
+width is
+\[
+ W_b=\left(\frac1m+\frac1c\right)\left\{\sum_{r=n_b-t_b+1}^{n_b}y_{b(r)}
+ -\sum_{r=1}^{t_b}y_{b(r)}\right\}.
+\]
+\end{proposition}
+\begin{proof}
+A perfect matching never crosses components and uses every donor of its component once,
+so the feasible set factorizes and the objective is a sum. A one-arm component contributes
+its constant weight times a fixed donor total. In a complete component the contribution is
+$(1/m+1/c)$ times the sum of the $t_b$ donors given to treated anchors, minus the fixed
+donor total divided by $c$; any $t_b$-subset is attainable, so the smallest and largest
+such sums give the extrema.
+\end{proof}
 
 \begingroup\small
 \begin{thebibliography}{9}

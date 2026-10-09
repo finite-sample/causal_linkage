@@ -240,7 +240,7 @@ writeLines(
 )
 code <- c(
   "R/core.R", "R/graph.R", "R/information.R", "R/accuracy.R",
-  "scripts/identifier-validation.R", "research/identifier-validation-design.md"
+  "scripts/identifier-validation.R"
 )
 write.csv(data.frame(path = code, md5 = unname(tools::md5sum(code))),
   file.path(out, "input-manifest.csv"),

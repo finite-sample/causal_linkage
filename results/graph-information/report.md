@@ -36,4 +36,4 @@ The small design is discrete: a larger effect need not raise power at every step
 The full summary includes 10% and 20% thresholds. The assignment-level file
 preserves every result, including failures to reject. No assignment is dropped.
 
-See [formalization and proofs](../../research/graph-information.md).
+See the [paper](../../manuscript/paper.pdf) for the formal results.

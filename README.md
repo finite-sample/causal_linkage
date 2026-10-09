@@ -3,40 +3,17 @@
 Does an experimental conclusion survive every linkage allowed by the candidate
 records and an identity-error budget?
 
-This research compendium answers that question for completely randomized
-experiments whose assignment and outcome files cover the same units once. It
-computes the minimum and maximum Fisher p-values over feasible one-to-one
-linkages, returns the identities attaining them, and finds the smallest number
-of changed accepted identities that removes rejection.
+For completely randomized experiments whose assignment and outcome files cover the
+same units once, this code computes the minimum and maximum Fisher p-values over
+feasible one-to-one linkages, returns the linkages attaining them, and finds the
+smallest number of changed identities that removes rejection. Every feasible linkage
+shares one randomization distribution, so the largest p-value comes from the
+smallest attainable absolute treatment contrast, which an integer program finds.
 
-Read the [methods paper](manuscript/paper.pdf),
-[proofs and interpretation](research/graph-information.md), and
-[focused comparison with prior work](research/exact-method-priority.md).
-The procedure specializes established matching-set and misclassification
-sensitivity methods. Its contribution is the exact causal test over permitted
-record identities, with an inspectable sensitivity result. Controlled examples
-show that candidate information can change a decision. The identifier experiment
-finds modest gains and substantial power loss.
-
-## Method
-
-Under the sharp no-effect null, every full permutation of donor outcomes has the
-same complete-randomization reference law. The largest p-value therefore comes
-from the smallest **attainable** absolute treatment contrast. An integer program
-finds that contrast. Linear assignment endpoints give the smallest p-value.
-A contrast interval containing zero need not contain an attainable zero.
-
-The maximum p-value supports rejection that is robust to the stated identity
-uncertainty. The minimum describes the most favorable allowed reconstruction;
-selecting it after observing outcomes does not produce a valid robust test.
-Both endpoints come with feasible linkages.
-
-The test requires a candidate set and error budget containing the true linkage.
-An optional `delta` adjusts for a supplied bound on whole-set containment failure.
-Two-valued outcomes use
-an exact hypergeometric distribution. General outcomes enumerate treatment
-assignments, subject to an explicit limit. All optimization uses normalized
-outcomes so p-values do not depend on measurement units.
+The test is valid when the candidate set and error budget contain the true linkage.
+The maximum p-value is the robust test; picking the minimum after seeing outcomes is
+not a valid test. Method, proofs and simulations are in the
+[paper](manuscript/paper.pdf).
 
 ## Example
 
@@ -58,57 +35,20 @@ fit$least_favorable_map
 graph_breakdown_budget(y, z, graph, accepted, alpha = .05)
 ```
 
-`graph_breakdown_budget()` returns the first identity budget at which the robust
-test fails to reject, with an attaining linkage. The accepted map must itself be feasible. It returns zero when its
-containment-adjusted p-value already fails to reject, and infinity when no graph-feasible map removes
-rejection.
+`graph_breakdown_budget()` returns the first identity budget at which the robust test
+fails to reject, with a linkage that attains it.
 
 ## Reproduce
 
-Requires R and the packages in `renv.lock`; the paper also requires LaTeX.
-
-```r
-install.packages("renv")
-renv::restore()
-```
+Requires R, the packages in `renv.lock` (`renv::restore()`), and LaTeX.
 
 ```sh
-make methods
+make methods   # tests, lint, both simulations, paper
+make report    # rebuild the paper from committed results
 ```
 
-This runs tests and lint, the exhaustive small-design comparison, the synthetic
-identifier experiment, and the paper build. `make report` rebuilds the paper from
-existing results. `solver_timeout` optionally caps each optimization in seconds;
-zero means no limit. A timed-out solver raises an error and never reports an exact
-optimum. The identifier experiment records unresolved cases and uses conservative
-nonrejection for its operational comparison.
-
-- [R/information.R](R/information.R): exact p-value extrema, witnesses, containment
-  adjustment, and identity breakdown.
-- [R/accuracy.R](R/accuracy.R): exact binary accuracy-only comparator preserving
-  the donor pool and identity budget.
-- [Identifier experiment](results/identifier-validation/report.md): candidates
-  generated before assignments and outcomes, with paired comparisons and runtime
-  diagnostics.
-- [Controlled design](results/graph-information/report.md): all treatment assignments
-  for a small example with fixed accuracy and candidate counts.
-- [Method audit](research/exact-method-audit.md): mathematical checks and scope.
-- [Claim ledger](research/methods-ledger.md): claims, producing code, and checks.
-
-## Supporting work
-
-The [earlier compendium](manuscript/background.pdf) develops bias decompositions,
-validation-sample corrections, general reconstruction bounds, and simulations.
-Rebuild it with `make background`; the earlier simulation target is `make simulate`.
-
-The [Rajasthan exercise](application/results/lottery/report.md) assumes the stated
-reservation lottery and studies stratified assignments with extra donor records.
-It evaluates feasible witnesses and Monte Carlo bounds, not the exact global
-p-value endpoints proved for full bijections. Its
-[candidate-set audit](application/results/linkage-stress-audit/report.md) finds
-that dramatic small-budget changes depend on weak name alternatives; tighter
-restrictions sharply reduce coefficient sensitivity. Reproduce with `make application lottery linkage-audit`, using
-`QUOTA_PATH=../quota_spending` or another source path.
-
-The exact method covers Fisher's sharp null, known treatment assignment, and
-complete overlap.
+- `R/`: p-value extrema and witnesses (`information.R`), linkage bounds (`graph.R`),
+  the binary accuracy-only comparator (`accuracy.R`).
+- `scripts/`: the controlled design, the identifier simulation, and table rendering.
+- `results/`: outputs the paper reads.
+- `tests/`: checks against exhaustive enumeration of linkages and assignments.

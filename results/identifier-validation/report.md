@@ -1,6 +1,6 @@
 # Outcome-blind identifier validation
 
-Phase: final ; 960 evaluations; 13 failures.
+Phase: final ; 960 evaluations; 14 failures.
 
 Identifiers and accepted assignments precede treatment and outcome generation.
 True-graph containment follows the bounded corruption mechanism. Both robust
@@ -34,15 +34,15 @@ the successful fraction. Computational fallback can reverse the theoretical powe
 | 40 | 0.75 | geographic | 0.25 | 0.100 | 0.000 | 0.000 | 0.000 (0.000) | 0 |
 | 80 | 0.75 | geographic | 0.25 | 0.625 | 0.000 | 0.000 | 0.000 (0.000) | 0 |
 | 40 | 0.25 | uniform | 0.25 | 0.225 | 0.050 | 0.050 | 0.000 (0.000) | 0 |
-| 80 | 0.25 | uniform | 0.25 | 0.500 | 0.000 | 0.000 | 0.000 (0.000) | 3 |
+| 80 | 0.25 | uniform | 0.25 | 0.500 | 0.000 | 0.000 | 0.000 (0.000) | 2 |
 | 40 | 0.75 | uniform | 0.25 | 0.125 | 0.000 | 0.000 | 0.000 (0.000) | 0 |
 | 80 | 0.75 | uniform | 0.25 | 0.450 | 0.000 | 0.000 | 0.000 (0.000) | 0 |
 | 40 | 0.25 | geographic | 0.50 | 0.575 | 0.100 | 0.075 | 0.025 (0.025) | 0 |
-| 80 | 0.25 | geographic | 0.50 | 0.925 | 0.000 | 0.000 | 0.000 (0.000) | 2 |
+| 80 | 0.25 | geographic | 0.50 | 0.925 | 0.000 | 0.000 | 0.000 (0.000) | 3 |
 | 40 | 0.75 | geographic | 0.50 | 0.575 | 0.100 | 0.000 | 0.100 (0.048) | 0 |
 | 80 | 0.75 | geographic | 0.50 | 0.950 | 0.000 | 0.000 | 0.000 (0.000) | 0 |
 | 40 | 0.25 | uniform | 0.50 | 0.800 | 0.200 | 0.200 | 0.000 (0.000) | 0 |
-| 80 | 0.25 | uniform | 0.50 | 1.000 | 0.000 | 0.000 | 0.000 (0.000) | 6 |
+| 80 | 0.25 | uniform | 0.50 | 1.000 | 0.000 | 0.000 | 0.000 (0.000) | 7 |
 | 40 | 0.75 | uniform | 0.50 | 0.850 | 0.050 | 0.025 | 0.025 (0.025) | 0 |
 | 80 | 0.75 | uniform | 0.50 | 0.975 | 0.000 | 0.000 | 0.000 (0.000) | 0 |
 

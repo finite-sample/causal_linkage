@@ -1,11 +1,12 @@
-Package: causallinkageResearch
-Title: Research Compendium for Causal Inference with Uncertain Record Linkage
+Package: causallinkage
+Title: Exact Randomization Inference with Uncertain Record Identities
 Version: 0.1.0
 Authors@R: person("Gaurav", "Sood", role = c("aut", "cre"))
-Description: Finite-population derivations, graph-constrained sensitivity analysis,
-    validation-sample correction, simulation, and a read-only empirical adapter.
-    This is a research compendium, not a released statistical package.
+Description: Exact Fisher p-value endpoints, attaining linkages, and identity
+    breakdown budgets for completely randomized experiments whose assignment
+    and outcome files are linked through a candidate graph and an identity-error
+    budget.
 License: MIT + file LICENSE
 Encoding: UTF-8
-Imports: lpSolve, stringdist, sandwich
-Suggests: testthat, lintr, styler, arrow, dplyr, stringi, digest, renv
+Imports: lpSolve
+Suggests: testthat, lintr

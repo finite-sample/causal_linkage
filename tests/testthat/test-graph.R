@@ -45,48 +45,11 @@ test_that("outside options and error budgets are substantive constraints", {
   expect_error(linkage_bounds(1:2, c(0, 1), matrix(FALSE, 2, 2)), "feasible")
 })
 
-test_that("roster bounds maintain total treated and identify controls by complement", {
-  y <- c(0, 1, 3, 7)
-  g <- matrix(TRUE, 2, 4)
-  maps <- enumerate_linkages(g)
-  values <- apply(maps, 1, function(map) contrast(y, as.numeric(1:4 %in% map)))
-  expect_equal(unname(roster_bounds(y, g)), range(values))
-})
-
-test_that("zero local outcome range can carry global review value", {
-  g <- rbind(c(TRUE, TRUE, FALSE), c(TRUE, FALSE, TRUE))
-  p <- review_priority(c(.5, .5), c(0, 0, 100), g)
-  expect_equal(p$best_reduction[1], 50)
-  expect_equal(p$guaranteed_reduction[1], 0)
-})
-
-test_that("graph-max sharp-null test controls exact randomization size", {
-  y <- c(0, 1, 4, 6, 8, 11)
-  g <- diag(6) == 1
-  g[1:2, 1:2] <- TRUE
-  p <- apply(assignments(6, 3), 1, function(z) graph_null_p(y, z, g))
-  for (alpha in c(.05, .1, .2, .5)) expect_lte(mean(p <= alpha), alpha + 1e-12)
-})
-
-test_that("estimator bounds differ from causal confidence sets", {
-  z <- c(1, 1, 0, 0)
-  y <- c(1, 1, 0, 0)
-  b <- causal_bounds(z, y, diag(4) == 1, c(0, 1))
-  expect_equal(unname(b["estimator_lower"]), 1)
-  expect_lt(b["lower"], b["estimator_lower"])
-  expect_error(causal_bounds(z, y, diag(4) == 1, c(0, .5)), "support")
-})
-
-test_that("unsupported assignment and roster contracts fail explicitly", {
+test_that("unsupported assignment supports fail explicitly", {
   expect_error(
     sharp_null_p(1:4, c(1, 1, 0, 0), matrix(c(0, 0, 1, 1), 1)),
     "Invalid assignment support"
   )
   a <- assignments(4, 2)
   expect_error(sharp_null_p(1:4, a[1, ], rbind(a, a[1, ])), "Invalid assignment support")
-  expect_error(
-    roster_bounds(1:4, matrix(TRUE, 2, 4), outside = c(TRUE, TRUE)),
-    "unused argument"
-  )
-  expect_error(permutation_expectation(1:2, 2:3, c(1.5, 2.5)), "complete permutation")
 })
