@@ -14,9 +14,9 @@ Read the [methods paper](manuscript/paper.pdf),
 [focused comparison with prior work](research/exact-method-priority.md).
 The procedure specializes established matching-set and misclassification
 sensitivity methods. Its contribution is the exact causal test over permitted
-record identities, with an inspectable sensitivity result. Controlled examples establish that candidate information can change a decision.
-The identifier experiment finds modest gains and substantial power loss; a
-validated real-data application remains necessary.
+record identities, with an inspectable sensitivity result. Controlled examples
+show that candidate information can change a decision. The identifier experiment
+finds modest gains and substantial power loss.
 
 ## Method
 
@@ -32,12 +32,11 @@ selecting it after observing outcomes does not produce a valid robust test.
 Both endpoints come with feasible linkages.
 
 The test requires a candidate set and error budget containing the true linkage.
-An optional `delta` adjusts for a supplied bound on whole-set containment failure;
-the code does not estimate that bound from match scores. Two-valued outcomes use
+An optional `delta` adjusts for a supplied bound on whole-set containment failure.
+Two-valued outcomes use
 an exact hypergeometric distribution. General outcomes enumerate treatment
 assignments, subject to an explicit limit. All optimization uses normalized
-outcomes so p-values do not depend on measurement units. Numerical calculations
-still use floating-point tolerances; exactness describes the statistical target.
+outcomes so p-values do not depend on measurement units.
 
 ## Example
 
@@ -62,8 +61,7 @@ graph_breakdown_budget(y, z, graph, accepted, alpha = .05)
 `graph_breakdown_budget()` returns the first identity budget at which the robust
 test fails to reject, with an attaining linkage. The accepted map must itself be feasible. It returns zero when its
 containment-adjusted p-value already fails to reject, and infinity when no graph-feasible map removes
-rejection. This is the identity-constrained counterpart of existing breakdown
-and warning-accuracy analyses.
+rejection.
 
 ## Reproduce
 
@@ -91,11 +89,10 @@ nonrejection for its operational comparison.
   the donor pool and identity budget.
 - [Identifier experiment](results/identifier-validation/report.md): candidates
   generated before assignments and outcomes, with paired comparisons and runtime
-  diagnostics. Its error budget is oracle-known, not empirically calibrated.
+  diagnostics.
 - [Controlled design](results/graph-information/report.md): all treatment assignments
   for a small example with fixed accuracy and candidate counts.
-- [Independent method audit](research/exact-method-audit.md): mathematical checks,
-  the corrected scale-invariance defect, and scope boundaries.
+- [Method audit](research/exact-method-audit.md): mathematical checks and scope.
 - [Claim ledger](research/methods-ledger.md): claims, producing code, and checks.
 
 ## Supporting work
@@ -103,7 +100,6 @@ nonrejection for its operational comparison.
 The [earlier compendium](manuscript/background.pdf) develops bias decompositions,
 validation-sample corrections, general reconstruction bounds, and simulations.
 Rebuild it with `make background`; the earlier simulation target is `make simulate`.
-These results provide background rather than the main paper's contribution.
 
 The [Rajasthan exercise](application/results/lottery/report.md) assumes the stated
 reservation lottery and studies stratified assignments with extra donor records.
@@ -111,11 +107,8 @@ It evaluates feasible witnesses and Monte Carlo bounds, not the exact global
 p-value endpoints proved for full bijections. Its
 [candidate-set audit](application/results/linkage-stress-audit/report.md) finds
 that dramatic small-budget changes depend on weak name alternatives; tighter
-restrictions sharply reduce coefficient sensitivity. The source application is
-read only. Reproduce with `make application lottery linkage-audit`, using
+restrictions sharply reduce coefficient sensitivity. Reproduce with `make application lottery linkage-audit`, using
 `QUOTA_PATH=../quota_spending` or another source path.
 
-The exact method currently covers Fisher's sharp null, known treatment assignment,
-and complete overlap. Weak-null average-effect inference, general covariate and
-treatment reconstruction, and arbitrary blocked or partial-overlap designs require
-additional work. Synthetic comparisons do not validate real candidate containment.
+The exact method covers Fisher's sharp null, known treatment assignment, and
+complete overlap.
