@@ -1,13 +1,14 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,graphicx}
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\usepackage{working-paper}
+
+\usepackage{amsmath,amsthm,booktabs,longtable,graphicx}
+\usepackage[hidelinks]{hyperref}
 \newtheorem{proposition}{Proposition}
 \newtheorem{corollary}{Corollary}
 \newcommand{\M}{\mathcal M}
 \newcommand{\PrA}{\Pr_A}
 \input{../results/methods/macros.tex}
-\title{Exact randomization inference with uncertain record identities}
+\title{\scshape Exact randomization inference with uncertain record identities}
 \author{Gaurav Sood}
 \date{October 2026}
 \begin{document}
@@ -44,15 +45,15 @@ whole donor records. A corrected outcome vector that cannot arise from a feasibl
 is excluded. The algorithm does not require probabilities for individual links.
 
 Optimization of statistics over matching confidence sets is established
-\cite{hall}; their permutation test concerns a hypothesized matching, whereas here the
+\citep{hall}; their permutation test concerns a hypothesized matching, whereas here the
 randomness is the experimental assignment. Integer-programming sensitivity to binary
-outcome misclassification is also established \cite{heng}; here the budget counts changed
+outcome misclassification is also established \citep{heng}; here the budget counts changed
 identities rather than altered outcomes, and whole donor records are conserved under
 candidate restrictions. Permutation-set inference under a Gaussian regression model uses
-a different source of randomness \cite{ota}. The result here supplies the full-bijection
+a different source of randomness \citep{ota}. The result here supplies the full-bijection
 Fisher reference law and its reduction to attainable contrasts, using standard assignment
 constraints, absolute-value optimization, and confidence-set maximization. Linkage-induced
-causal bias and loss of power motivate a substantial literature \cite{wortman,tahamont}.
+causal bias and loss of power motivate a substantial literature \citep{wortman,tahamont}.
 
 \section{Experimental units and feasible identities}
 Fix $N$ units with potential outcomes $Y_i(0),Y_i(1)$. Exactly $m$ receive treatment,
@@ -138,7 +139,7 @@ The first event has probability at most $\delta$ and the second at most
 $\alpha-\delta$ by oracle randomization validity. If $\alpha<\delta$, rejection
 is impossible; $\alpha=1$ is immediate.
 \end{proof}
-This is the established confidence-set maximization argument \cite{berger}.
+This is the established confidence-set maximization argument \citep{berger}.
 The graph may be data dependent; independence between graph construction and outcomes
 is not required by the proof. What is required is the joint containment bound under
 the relevant repeated experiment. Pairwise candidate recall is not the probability
@@ -166,7 +167,7 @@ cross-arm swaps matter according to the outcome difference. Arbitrary matching
 differences decompose into alternating cycles. This explains why error counts and
 candidate counts alone do not determine uncertainty. These are standard assignment
 properties applied to the causal contrast, consistent with earlier observations about
-harmless within-subclass linkage errors \cite{wortman}.
+harmless within-subclass linkage errors \citep{wortman}.
 
 For breakdown analysis require the accepted map itself to satisfy the graph
 constraints, so the zero-budget set is nonempty. Define the identity breakdown budget by
@@ -177,7 +178,7 @@ where rejection uses $p\le\alpha$. The output is zero if the containment-adjuste
 to reject and infinity if every graph-feasible map rejects. Because feasible sets grow
 with $K$, $p_{\mathrm{rob}}$ is nondecreasing, so binary search finds the first budget.
 It returns a linkage demonstrating the loss of rejection. This is an identity-constrained
-counterpart of warning accuracy for outcome misclassification \cite{heng}.
+counterpart of warning accuracy for outcome misclassification \citep{heng}.
 
 \subsection{A comparator that conserves donors}
 The accuracy-only comparison retains the same $y,\pi_0,K$ and one-to-one constraint,
@@ -271,23 +272,23 @@ reconstruction retained by the stated restrictions rejects the sharp no-effect n
 
 \begingroup\small
 \begin{thebibliography}{9}
-\bibitem{hall} Hall, R., and S. Fienberg (2012).
+\bibitem[Hall and Fienberg(2012)]{hall} Hall, R., and S. Fienberg (2012).
 Valid Statistical Inference on Automatically Matched Files.
 \url{https://www.cs.cmu.edu/~rjhall/linkage.pdf}.
-\bibitem{heng} Heng, S., and P. A. Shaw (2025).
+\bibitem[Heng and Shaw(2025)]{heng} Heng, S., and P. A. Shaw (2025).
 Sensitivity Analysis for Binary Outcome Misclassification in Randomization Tests via
 Integer Programming. \url{https://arxiv.org/abs/2201.03111}.
-\bibitem{ota} Ota, H., and M. Imaizumi (2026).
+\bibitem[Ota and Imaizumi(2026)]{ota} Ota, H., and M. Imaizumi (2026).
 Finite-Sample Inference for Sparsely Permuted Linear Regression.
 \url{https://arxiv.org/abs/2601.14872}.
-\bibitem{berger} Berger, R. L., and D. D. Boos (1994).
+\bibitem[Berger and Boos(1994)]{berger} Berger, R. L., and D. D. Boos (1994).
 P Values Maximized Over a Confidence Set for the Nuisance Parameter.
 Journal of the American Statistical Association 89:1012--1016.
 \url{https://doi.org/10.1080/01621459.1994.10476836}.
-\bibitem{wortman} Wortman, J. H., and J. P. Reiter (2018).
+\bibitem[Wortman and Reiter(2018)]{wortman} Wortman, J. H., and J. P. Reiter (2018).
 Simultaneous Record Linkage and Causal Inference with Propensity Score Subclassification.
 \url{https://arxiv.org/abs/1709.03631}.
-\bibitem{tahamont} Tahamont, S., et al. (2021).
+\bibitem[Tahamont et~al.(2021)]{tahamont} Tahamont, S., et al. (2021).
 Dude, Where's My Treatment Effect? Errors in Administrative Data Linking and the
 Destruction of Statistical Power in Randomized Experiments.
 \url{https://doi.org/10.1007/s10940-020-09461-x}.
